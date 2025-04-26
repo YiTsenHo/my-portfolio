@@ -3,9 +3,9 @@ export const projectsData = [
     id: 2,
     title: "即時路況 App UI 設計",
     imageUrl: [
-      `${import.meta.env.BASE_URL}images/projects/project2/1.png`,
-      `${import.meta.env.BASE_URL}images/projects/project2/2.png`,
-      `${import.meta.env.BASE_URL}images/projects/project2/3.png`,
+      "/my-portfolio/images/projects/project2/1.png",
+      "/my-portfolio/images/projects/project2/2.png",
+      "/my-portfolio/images/projects/project2/3.png",
     ],
     category: "UI 設計"
   },
@@ -13,8 +13,8 @@ export const projectsData = [
     id: 4,
     title: "旅行計畫生成器",
     imageUrl: [
-      "/images/projects/travel1.png",
-      "/images/projects/travel2.png",
+      "/my-portfolio/images/projects/travel1.png",
+      "/my-portfolio/images/projects/travel2.png",
     ],
     category: "UI 設計"
   },
