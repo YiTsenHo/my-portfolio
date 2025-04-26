@@ -3,9 +3,9 @@ export const projectsData = [
     id: 2,
     title: "即時路況 App UI 設計",
     imageUrl: [
-      "/images/projects/project2/1.png",
-      "/images/projects/project2/2.png",
-      "/images/projects/project2/3.png",
+      `${import.meta.env.BASE_URL}images/projects/project2/1.png`,
+      `${import.meta.env.BASE_URL}images/projects/project2/2.png`,
+      `${import.meta.env.BASE_URL}images/projects/project2/3.png`,
     ],
     category: "UI 設計"
   },
