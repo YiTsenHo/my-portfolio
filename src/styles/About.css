@@ -1,0 +1,192 @@
+.about-section {
+  background: linear-gradient(170deg, #f8faff 0%, rgba(248, 250, 255, 0.5) 100%);
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+}
+
+.about-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  width: 100%;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.about-text p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideInUp 0.8s ease-out forwards;
+}
+
+.about-text p:nth-child(2) { animation-delay: 0.2s; }
+.about-text p:nth-child(3) { animation-delay: 0.4s; }
+.about-text p:nth-child(4) { animation-delay: 0.6s; }
+
+.social-links {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: white;
+  color: #98cfff;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(152, 207, 255, 0.15);
+}
+
+.social-icon:hover {
+  transform: translateY(-3px) rotate(8deg);
+  color: #4facfe;
+  box-shadow: 0 4px 12px rgba(152, 207, 255, 0.25);
+}
+
+.portaly-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #98cfff;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
+}
+
+.portaly-button:hover {
+  background: #4facfe;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(152, 207, 255, 0.3);
+  color: white;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  animation: fadeInRotate 1.2s ease-out;
+}
+
+.image-container {
+  width: 380px;  /* 增加容器尺寸 */
+  height: 380px;
+  position: relative;
+  background: linear-gradient(135deg, #f0f7ff 0%, #e6f3ff 100%);  /* 添加漸層背景 */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.profile-image {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+}
+
+.decoration-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid rgba(152, 207, 255, 0.3);
+  animation: rotate 20s linear infinite, pulse 3s ease-in-out infinite;
+}
+
+/* 添加第二個裝飾圓圈 */
+.decoration-circle:before {
+  content: '';
+  position: absolute;
+  inset: -15px;
+  border-radius: 50%;
+  border: 1px solid rgba(152, 207, 255, 0.2);
+  animation: rotate 25s linear infinite reverse, pulse 3s ease-in-out infinite 1.5s;
+}
+
+@keyframes fadeInRotate {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotate(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.1); opacity: 0.2; }
+  100% { transform: scale(1); opacity: 0.3; }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .image-container {
+    width: 280px;  /* 手機版調整尺寸 */
+    height: 280px;
+  }
+
+  .about-container {
+    padding: 2rem 1rem;
+  }
+}
